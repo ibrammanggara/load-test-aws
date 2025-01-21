@@ -205,6 +205,33 @@
 
 ---
 
+## langkah membuat auto scaling (EC2)
+
+1. nama auto scaling : ec2-scaling
+2. pilih launch template : template-ec2-efs
+3. next
+4. network : vpc=VPC-SAKTI, subnet=(private subnet 2a)
+5. next
+6. attach to a new load balancer
+7. load balancer type : Network Load Balancer
+8. nama load balancer = load-balancer-scal-efs
+9. scheme : internet-facing
+10. load balancer subnet : subnet (publik subnet 2a)
+11. port : 80 > create a target group
+12. nama target grup : load-balancer-scal
+13. Additional health check types : turn on elastic load balancer health checks
+14. next
+15. Desired capacity : 2
+16. Min desired capacity : 1
+17. Max desired capacity : 4
+18. Target tracking scaling policy : scaling policy name=policy | Metric type=average cpu | target value=30 | Instance warmup=120
+19. monitoring (optional)
+20. next 3x
+21. create auto scaling
+
+---
+
+
 
 
 
