@@ -11,7 +11,7 @@
 ## Langkah membuat VPC
 
 1. masukkan nama vpc : VPC-SAKTI
-2. masukkan ip cidr IPv4 : 192.168.0.0/16
+2. masukkan ip cidr IPv4 : 10.100.0.0/16
 3. save
 4. edit vpc setting : ceklis enable dns hostname
 
@@ -20,21 +20,21 @@
 ## Langkah membuat 4 subnet (2 publik subnet & 2 privat subnet)
 
 1. pilih vpc : VPC-SAKTI
-2. masukan nama subnet : SUBNET PUBLIK 1A
-3. pilih az : us-east-1a
-4. masukkan IPv4 subnet CIDR block : 192.168.10.0/24
+2. masukan nama subnet : public subnet 2a
+3. pilih az : us-west-2a
+4. masukkan IPv4 subnet CIDR block : 10.100.1.0/28
    ### (+) add new subnet
-1. masukan nama subnet : SUBNET PRIVAT 1A
-2. pilih az : us-east-1a
-3. masukkan IPv4 subnet CIDR block : 192.168.20.0/24
+1. masukan nama subnet : public subnet 2b
+2. pilih az : us-west-2b
+3. masukkan IPv4 subnet CIDR block : 10.100.2.0/28
    ### (+) add new subnet
-1. masukan nama subnet : SUBNET PUBLIK 1B
-2. pilih az : us-east-1b
-3. masukkan IPv4 subnet CIDR block : 192.168.30.0/24
+1. masukan nama subnet : private subnet 2a
+2. pilih az : us-west-2a
+3. masukkan IPv4 subnet CIDR block : 10.100.10.0/24
    ### (+) add new subnet
-1. masukan nama subnet : SUBNET PRIVAT 1B
-2. pilih az : us-east-1b
-3. masukkan IPv4 subnet CIDR block : 192.168.40.0/24
+1. masukan nama subnet : private subnet 2b
+2. pilih az : us-west-2b
+3. masukkan IPv4 subnet CIDR block : 10.100.20.0/24
 4. save
 
    ## edit semua subnet publik
