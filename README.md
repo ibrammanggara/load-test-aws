@@ -37,7 +37,10 @@
 3. masukkan IPv4 subnet CIDR block : 10.100.20.0/24
 4. save
 
+---
+
    ## edit semua subnet publik
+   
 1. Enable auto-assign public IPv4 address
    
 ---
