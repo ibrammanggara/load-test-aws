@@ -157,10 +157,58 @@
 
 ---
 
-g
+## masuk ke ec2 (load test app) dengan bastion untuk installasi dan mount efs
+
+1. menu efs klik atach : mount via ip
+2. copy kode mount efs
+3. di ec2 (load test app)
+4. $sudo mkdir -p /var/www/html
+5. $(paste kode nya dan ganti alamat mount [efs] ke [/var/www/html])
+6. $sudo nano /etc/fstab
+7. #pasang = ip:/ /var/www/html nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0
+8. $sudo mount -a
+9. $sudo mount -s
+10. #cek keterangan (ok) jika muncul maka telah berhasil anda bisa mencoba reboot sistem
+11. $sudo reboot
+12. #step 2
+13. #pasang paket yang di perlukan dan import file load test cpu ke /var/www/html
+14. #exit ke ec2 bastion
+15. curl ip private(load test app)
+16. jika terdapat kode html dari source code yang sesuai maka sudah berhasil
 
 ---
 
-g
+## membuat AMIs dengan ec2(load test app)
+
+1. di panel ec2, klik instance ec2 (load test app)
+2. klik actions > image and templates > create image
+3. nama image : image-ec2-efs
+4. desk : ec2 dengan hubungan efs
+5. save
+6. #memerlukan waktu untuk image siap digunakan
 
 ---
+
+## membuat launch template dengan AMIs
+
+1. 
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
