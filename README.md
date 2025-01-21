@@ -194,7 +194,14 @@
 
 ## membuat launch template dengan AMIs
 
-1. 
+1. nama : template-ec2-efs
+2. desk : template ec2 AMIs
+3. Auto Scaling guidance : ceklis
+4. My AMIs : image-ec2-efs
+5. instance type : t2.micro
+6. key pair : sakti.pem
+7. security group : sakti-keamanan
+8. save
 
 ---
 
