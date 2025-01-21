@@ -142,16 +142,18 @@
 
 ---
 
-## langkah membuat EC2 (load test app)
+## langkah membuat EFS
 
-1. masukan nama ec2 : load test app
-2. ami : amazon linux 2
-3. instance type : t2.micro
-4. key pair : sakti.pem
-5. network setting : VPC-sakti, private subnet 2a, ip publik Disable
-6. pilih security gruop : nama = sakti-keamanan
-7. storage : 8GB
-8. save
+1. nama : efs
+2. klik (costumize)
+3. unceklis auto backup
+4. Lifecycle management : all none
+5. next
+6. vpc : VPC-sakti
+7. mount target : us-west-2b > subnet privat 2b > sg : sakti-keamanan-efs
+8. next
+9. next
+10. save
 
 ---
 
