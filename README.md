@@ -96,6 +96,26 @@
 
 ---
 
+## langkah membuat 2 SECURITY GROUP
+
+1. masukan nama : sakti-keamanan
+2. desk : untuk ec2 keamanan
+3. vpc : VPC-SAKTI
+4. inBound rules : ssh = 22 | http = 80 | https = 443 | all-icmp Ipv4 | (all anywhere - IPv4)
+5. save
+
+1. masukan nama : sakti-keamanan-efs
+2. desk : untuk efs keamanan
+3. vpc : VPC-SAKTI
+4. inBound rules : nfs = 2049 > source = id sg(sakti-keamanan)
+5. save
+
+1. edit : sakti-keamanan
+2. outBound rules : nfs = 2049 > source = id sg(sakti-keamanan-efs)
+3. save
+
+---
+
 ## langkah membuat EC2 (EC2 bastion)
 
 1. masukan nama ec2 : EC2 bastion
@@ -103,7 +123,7 @@
 3. instance type : t2.micro
 4. key pair : sakti.pem
 5. network setting : VPC-sakti, public subnet 2b, ip publik Enable
-6. buat security gruop : nama = sakti-keamanan | ssh = 22 | http = 80 | https = 443 | all-icmp Ipv4 | (all anywhere - IPv4)
+6. pilih security gruop : nama = sakti-keamanan
 7. storage : 8GB
 8. save
 
@@ -119,5 +139,26 @@
 6. pilih security gruop : nama = sakti-keamanan
 7. storage : 8GB
 8. save
+
+---
+
+## langkah membuat EC2 (load test app)
+
+1. masukan nama ec2 : load test app
+2. ami : amazon linux 2
+3. instance type : t2.micro
+4. key pair : sakti.pem
+5. network setting : VPC-sakti, private subnet 2a, ip publik Disable
+6. pilih security gruop : nama = sakti-keamanan
+7. storage : 8GB
+8. save
+
+---
+
+g
+
+---
+
+g
 
 ---
