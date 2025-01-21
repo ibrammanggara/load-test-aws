@@ -4,7 +4,7 @@
 
 ---
 
-![TPO Gambar](https://raw.githubusercontent.com/ibrammanggara/aws-load-balancer/main/tpo.png)
+![ftoo Gambar](https://raw.githubusercontent.com/ibrammanggara/load-test-aws/main/ftoo.png)
 
 
 
