@@ -109,4 +109,15 @@
 
 ---
 
+## langkah membuat EC2 (load test app)
 
+1. masukan nama ec2 : load test app
+2. ami : amazon linux 2
+3. instance type : t2.micro
+4. key pair : sakti.pem
+5. network setting : VPC-sakti, private subnet 2a, ip publik Disable
+6. pilih security gruop : nama = sakti-keamanan
+7. storage : 8GB
+8. save
+
+---
